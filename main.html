@@ -21,37 +21,37 @@
 
     <!-- <h3>Registration</h3></div> -->
     <div class="item" id="form">
-      <form action="/home.js">
+      <form id="registerForm">
         <div class="container">
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>
           <hr>
-          <label for="firstname"><b>First Name</b></label>
+          <label for="fname"><b>First Name</b></label>
           <input type="text" placeholder="Enter Participant's First Name" name="fname" id="fname" required>
       
-          <label for="lastname"><b>Last Name</b></label>
+          <label for="lname"><b>Last Name</b></label>
           <input type="text" placeholder="Enter Participant's Last Name" name="lname" id="lname" required>
       
           <label for="dob"><b>Date of Birth</b></label>
           <input type="text" placeholder="YYYY/MM/DD" name="dob" id="dob" required>
       
-          <label for="weightclass"><b>Weight</b></label>
+          <label for="weight"><b>Weight</b></label>
           <input type="text" placeholder="Enter Participant's Weight" name="weight" id="weight" required>
       
           <label for="session"><b>Session</b></label>
           <input type="text" placeholder="Which Session Will They Be Attending?" name="session" id="session" required>
       
-          <label for="cans"><b>Number of Cans Brought</b></label>
+          <label for="cansbrought"><b>Number of Cans Brought</b></label>
           <input type="text" placeholder="How Many Canned Goods Are You Donating?" name="cansbrought" id="cansbrought" required>
       
-          <label for="emergencyfname"><b>Emergency Contact First Name</b></label>
+          <label for="efname"><b>Emergency Contact First Name</b></label>
           <input type="text" placeholder="Enter Guardian's First Name" name="efname" id="efname" required>
       
-          <label for="emaergencylname"><b>Emergency Contact Last Name</b></label>
+          <label for="elname"><b>Emergency Contact Last Name</b></label>
           <input type="text" placeholder="Enter Guardian's Last Name" name="elname" id="elname" required>
       
-          <label for="telephone"><b>Emergency Contact Phone Number</b></label>
-          <input type="text" placeholder="Enter Guardian's Phone Number" name="contact" id="phone" required>
+          <label for="phone"><b>Emergency Contact Phone Number</b></label>
+          <input type="text" placeholder="Enter Guardian's Phone Number" name="contact" id="phone" autocomplete="off">
           
           <!-- <label for="age"><b>age</b></label>
           <input type="int" placeholder="input age" name="age" id="age" required>
@@ -78,8 +78,8 @@
 
       <div class="month">      
         <ul>
-          <li class="prev">&#10094;</li>
-          <li class="next">&#10095;</li>
+          <!-- <li class="prev">&#10094;</li>
+          <li class="next">&#10095;</li> -->
           <li>
             August<br>
             <span style="font-size:18px">2021</span>
@@ -185,7 +185,6 @@
         I acknowledge that my child's participation in the activity listed below is voluntary and may involve physical exertion or risk of injury. I confirm that my child is in good health and capable of participating safely.
         
         Activity/Event: Wrestling
-        Date(s): _______________________
         Location: Whitehall Elementary Gymnasium
         
         I release and hold harmless the organizers, instructors, venue, staff, volunteers, and any affiliated individuals or organizations from any liability, injury, or damages arising from my participation, including transportation to and from the event.
@@ -193,20 +192,24 @@
         2. Medical Authorization
         In the event of a medical emergency, I authorize qualified personnel to administer necessary first aid or medical treatment.
         
-        Emergency Contact Name: _________________________
-        Phone Number: ________________________________
-        
+     
         3. Photo & Media Release
         I grant permission to the organizers to take and use photographs, video, or audio recordings of my child during the above activity/event. These may be used for promotional, educational, or commercial purposes, including but not limited to social media, websites, and printed materials.
         
         I understand that there will not be any compensation for the use of these images or recordings and that my child's identity may be revealed in descriptive text or commentary.
         
-        ☐ I consent to the use of my child's image/audio/video.
-        ☐ I do NOT consent to the use of my child's image/audio/video.
+
+        <input type="radio" id="agree" name="consent" value="true">
+          <label for="agree"> ☐ I agree to the terms and conditions listed above.</label><br>
+          <input type="radio" id="disagree" name="xconsent" value="false">
+          <label for="disagree"> ☐ I do NOT agree to the terms and conditions listed above.</label><br>
         
-        Parent/Guardian Signature: ___________________________ Date: _____________
-
-
+        Parent/Guardian Signature: 
+        <form>
+          <label for="sname">Full Name</label><br>
+          <input type="text" id="sname" name="sname"><br>
+        </form>
+        ___________________________ Date: _____________
       </p>
 
 

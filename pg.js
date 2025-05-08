@@ -9,11 +9,11 @@ const pool = new Pool({
   user: 'dannidenmark',
   password: 'your_password',
   host: 'localhost',
-  port: 3000, // default Postgres port
+  port: 5432, // default Postgres port
   database: 'wecanwrestle'
 });
 
-pool.connect();
+// pool.connect();
 // module.exports = {
 //   query: (text, params) => pool.query(text, params)
 // };

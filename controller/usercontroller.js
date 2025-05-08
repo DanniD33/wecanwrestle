@@ -1,15 +1,7 @@
 const { Pool } = require('pg');
+const pool = require('../pg.js');
 
-// Setup your pool with real credentials
-const pool = new Pool({
-  user: 'dannidenmark',
-  host: 'localhost',
-  database: 'wecanwrestle',
-  password: 'your_password',
-  port: 3000,
-});
-
-const registerUser = async (req, res) => {
+registerUser = async (req, res) => {
   const {
         fname,
         lname,
@@ -20,10 +12,10 @@ const registerUser = async (req, res) => {
         waiver,
         efname,
         elname,
-        phone } = request.body;
+        phone } = req.body;
 
   try {
-    await pool.query('INSERT INTO attendee (fname,lname,dob,weight,session,cansbrought,waiver,efname,elname,phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)', 
+    const output = await pool.query('INSERT INTO attendee (fname,lname,dob,weight,session,cansbrought,waiver,efname,elname,phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)', 
         [ fname,
           lname,
           dob,
@@ -33,8 +25,9 @@ const registerUser = async (req, res) => {
           waiver,
           efname,
           elname,
-          phone]),
-    res.send('User registered successfully!');
+          phone]);
+    // res.send('User registered successfully!');
+    res.status(201).json({ message: "User saved", user: output.rows[0] });
   } catch (err) {
     console.error(err);
     res.status(500).send('Registration failed.');
