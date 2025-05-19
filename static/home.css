@@ -22,23 +22,37 @@ body, html {
   color: white;
   font-size: 4rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  position: relative;
+  /* z-index: 1; */
 }
 
 .parallax-1 {
   background-image: url('images/wcwlg.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: white; */
+  /* background-color: rgb(160, 27, 27); */
+  /* background-color: rgb(208, 201, 201); */ 
+  background-color: rgb(80, 9, 9);
+
 }
 
 .parallax-2 {
   background-image: url('images/wcw1.png');
-  background-position: left -50px; 
-  /* background-position: contain;  */
+  background-size: contain; 
+  background-position: left; 
+  background-color: rgb(80, 9, 9);
+  /* background-color: rgb(100, 22, 22); */
+  /* background-position: center 10px;  */
+  
   /* Y-offset only */
-
 }
 
+
+
 .parallax-3 {
-  background-image: url('images/wrestle1.jpg');
+  /* background-image: url('images/wrestle1.jpg'); */
   background-size: contain;
 
   /* background-size: cover; */
@@ -47,7 +61,76 @@ body, html {
   /* background-position: center 10px;  */
   
   /* Y-offset only */
+
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .carousel-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* allow scrolling effect */
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0.5; 
+  }
+  
+  .carousel-track1 {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .carousel-track1 img {
+    height: 100%;
+    width: auto;
+    flex-shrink: 0;
+  }
+  
+  .foreground-content {
+    position: relative;
+    z-index: 1;
+  
 }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .content {
   height: 50vh;
@@ -56,36 +139,346 @@ body, html {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.parallax-left,
+.parallax-right {
+  flex: 1;
 }
 
 
 
+/* .parallax-left {
+  background-image: url('images/wcw1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 40%; 
+  height: 100vh;
+
+} */
 
 
 
-.collage-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+.parallax-right {
+  margin-left: auto; /* pushes to the right inside flex container */
+  margin-right: 2%; /* optional: adds spacing from the right edge */
+  /* background: url('images/note.PNG'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40%; /* or any width you want */
   padding: 2rem;
+  border-radius: 10px;
+  z-index: 2;
+  position: relative;
 }
 
-.collage-item {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-  width: 300px; /* adjust as needed */
-}
 
-.collage-item.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-.collage-item img {
-  width: 100%;
-  height: auto;
+
+
+.collage-item1, .collage-item2 {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* 25% smaller */
+  /* width: 75%; 
+  height: auto; */
+  transform: scale(0.75); /* 75% of the original size */
+  transform-origin: bottom; 
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  /* background-color: teal; */
+  animation: appear 2s ease-in-out;
+  animation-timeline: view();
+  /* animation-timeline: view(axis inset); */
+  
+  
 }
+
+.collage-item1 {
+  /* top: -10px;
+  left: -15px; */
+display: flex;
+align-items: center;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.4; /* Start partially visible */
+    scale: 0.4;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
+
+
+.barriecito-regular {
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scroll-image.visible {
+  opacity: 0.51;
+  /* transform: translateX(-200px); Push further off-screen */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  max-width: 100%;
+  width: 300px;
+  margin: 100px auto;
+  position: relative;
+  /* z-index: 5; */
+  display: block;
+  /* animation-name: example;
+  animation-duration: infinity; */
+  animation: example 5s linear infinite;
+
+}
+
+/* .scroll-image.visible {
+  opacity: 1;
+  transform: translateX(0); 
+} */
+
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: red;}
+}
+
+.scroll-image.visible:hover {
+  width: 700px;
+}
+
+.hand{
+  max-width: 100%;
+  width: 300px;
+  margin: 100px auto;
+  margin-top: -10%;
+  animation: canopen 5s linear infinite;
+  animation-timeline: view();
+
+}
+
+
+@keyframes canopen {
+  from {
+    translate: -150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+
+/* This class houses a form that i name container */
+.item {
+    padding: 10px 10px;
+    margin: 0 auto;
+  
+}
+
+.item * {
+  margin-top: 6px;
+  margin-bottom: 6px; 
+  margin-left: 5%;
+  
+}
+ 
+  
+label {
+  font-size: 14px;
+  font-weight: normal; 
+}
+
+.grid2 .item:nth-child(1) {
+  grid-area: hero;
+}
+.grid2 .item:nth-child(2) {
+  grid-area: aside2;
+}
+
+.grid2 .item:nth-child(3) {
+  grid-area: aside3;
+}
+.grid2 .item:nth-child(4) {
+  grid-area: aside4;
+}
+
+.grid2 .item:nth-child(5) {
+  grid-area: aside5;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* this is the form section but i named it container everything from sign in class up (in the 380 range)*/
+.container {
+  padding: 16px;
+  background-color: green;
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 0 0;
+  display: inline-block;
+  border: none;
+  background: purple;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.content h2 {
+  position: relative;
+  top: -40px;
+  left: 40;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* text inside bio */
+.content p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: rgb(245, 245, 135);
+}
+
+
+/* left image about the founder */
+.collage-item1 {
+margin-top: -20%; /* Moves image up */  
+left: 40;
+
+}
+
+
+
+
+
+
+

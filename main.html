@@ -6,42 +6,230 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>We Can Wrestle</title>
   <link rel="stylesheet" href="home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Chewy&family=Delicious+Handrawn&family=Gorditas:wght@400;700&family=Knewave&family=Ribeye+Marrow&display=swap" rel="stylesheet" href="home.css">
 </head>
 <body>
 
-  <section class="parallax parallax-1">
+  <section class="parallax parallax-1 background">
     <div class="text">Welcome</div>
   </section>
-
+  
   <section class="content">
+    <img class="scroll-image visible" src="images/cantop.PNG" alt="Your Image">
+    <img class="hand" src="images/hand.png" alt="Wrestling Camp 1">
+
     <p>This is a simple section between parallax backgrounds.</p>
-  </section>
-
-  <section class="parallax parallax-2">
+    <!-- <div class="green-circle"></div> -->
+    <!-- <div class="collage-item">
+      <img src="images/hand.png" alt="hand"></div>
+      <img src="images/cantop.PNG" alt="Wrestling Camp 3"></div> -->
+      
+    </section>
+      
+    
+  <!-- <section class="parallax parallax-2 background">
     <div class="text">Explore</div>
+    <img src="images/note.PNG" alt="note">
+    <div>
+      <form>
+        hello for the form
+      </form>
+    </div>
+  </section> -->
+
+
+  <!-- <section class="parallax parallax-2 ">
+    <div class="parallax-split">
+      <div class="parallax-left"></div>
+      <div class="parallax-right">
+        <form>
+          <h2>Register for Camp</h2>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
   </section>
+   -->
+
+
+
+   <section class="parallax parallax-2">
+    <div class="parallax-left"></div>
+    
+    <div class="parallax-right">
+      <!-- <form>
+        <h2>Register for Camp</h2>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <button type="submit">Submit</button>
+      </form> -->
+
+
+
+
+
+      <div class="item" id="form">
+        <form id="registerForm">
+          <div class="container">
+            <h1>Register</h1>
+            <p>Please fill in this form to register your child's attendance.</p>
+            <hr>
+            <label for="fname">First Name</label>
+            <input type="text" placeholder="Enter Participant's First Name" name="fname" id="fname" required>
+        
+            <label for="lname">Last Name</label>
+            <input type="text" placeholder="Enter Participant's Last Name" name="lname" id="lname" required>
+        
+            <label for="dob">Date of Birth</label>
+            <input type="text" placeholder="YYYY/MM/DD" name="dob" id="dob" required>
+        
+            <label for="weight">Weight</label>
+            <input type="text" placeholder="Enter Participant's Weight" name="weight" id="weight" required>
+        
+            <!-- <label for="session">Session</label> -->
+            <div class="session-carousel">
+              <!-- <button type="button" id="prevSession">←</button>
+              <input type="text" name="session" id="session" readonly value="Morning Session (9 AM - 11 AM)" required>
+              <button type="button" id="nextSession">→</button> -->
+  
+  
+              <label for="session">Session</label>
+              <select name="session" id="session">
+                <option value="1">Session 1 (5:30PM - 6:30PM)</option>
+                <option value="2">Session 2 (6:45PM - 7:45PM)</option>
+              </select>
+              <!-- <input type="submit" value="Submit"> -->
+  
+            </div>
+            <!-- <input type="text" placeholder="Which Session Will They Be Attending?" name="session" id="session" required> -->
+        
+            <label for="cansbrought">Number of Cans Brought</label>
+            <input type="text" placeholder="How Many Canned Goods Are You Donating?" name="cansbrought" id="cansbrought" required>
+        
+            <label for="efname">Emergency Contact First Name</label>
+            <input type="text" placeholder="Enter Guardian's First Name" name="efname" id="efname" required>
+        
+            <label for="elname">Emergency Contact Last Name</label>
+            <input type="text" placeholder="Enter Guardian's Last Name" name="elname" id="elname" required>
+        
+            <label for="phone">Emergency Contact Phone Number</label>
+            <input type="text" placeholder="Enter Guardian's Phone Number" name="phone" id="phone" autocomplete="off">
+            
+            <!-- <label for="age"><b>age</b></label>
+            <input type="int" placeholder="input age" name="age" id="age" required>
+  
+            <label for="weight"><b>weight</b></label>
+            <input type="int" placeholder="input weight" name="weight" id="weigth" required>
+             -->
+            <!-- <label for="class"><b>class</b></label>
+            <input type="int" placeholder="input age" name="age" id="age" required> -->
+  
+            <hr>
+            <p>By registering your child you agree to our Terms & Conditions.</p>
+        
+            <button type="submit" class="registerbtn">Register</button>
+            <div id="myModal" class="modal"> 
+              <div class="modal-content">
+                <span id="exitModal" class="close">&times;</span>
+                <p>
+                  Activity/Event: Wrestling<br>
+                  Location: Whitehall Elementary Gymnasium<br>
+                  <br>
+                  <br>
+                  1. Physical Activity Waiver and Release of Liability<br>
+                  I acknowledge that my child's participation in the activity listed below is voluntary and may involve physical exertion or risk of injury. I confirm that my child is in good health and capable of participating safely.
+                  I release and hold harmless the organizers, instructors, venue, staff, volunteers, and any affiliated individuals or organizations from any liability, injury, or damages arising from my participation, including transportation to and from the event.<br>
+                  <br>
+                  <br>
+                  2. Medical Authorization<br>
+                  In the event of a medical emergency, I authorize qualified personnel to administer necessary first aid or medical treatment.<br>
+                  <br>
+                  <br>
+                  3. Photo & Media Release<br>
+                  I grant permission to the organizers to take and use photographs, video, or audio recordings of my child during the above activity/event. These may be used for promotional, educational, or commercial purposes, including but not limited to social media, websites, and printed materials.
+                  I understand that there will not be any compensation for the use of these images or recordings and that my child's identity may be revealed in descriptive text or commentary.<br>
+                  
+          
+                  <input type="radio" id="agree" name="waiver" value="true">
+                    <label for="agree"> I agree to the terms and conditions listed above.</label><br>
+                    <input type="radio" id="disagree" name="waiver" value="false">
+                    <label for="disagree"> I do NOT agree to the terms and conditions listed above.</label><br>
+                  
+                  Parent/Guardian Signature: <br>
+                  <form>
+                    <label for="sname">Full Name</label><br>
+                    <input type="text" id="sname" name="sname"><br>
+                  </form>
+                  
+                  
+                  
+                  <button id="confirmBtn">Yes, Submit</button>
+                  <button id="closeModal">No, Cancel</button>
+                </p>
+              </div>
+          </div>
+          
+    </div>
+  </section>
+  
+
+
+
+
+
 
   <section class="content">
-    <h2> About the Founder </h2> 
+    <div class="collage-item1"><img src="images/sect1img.PNG" alt="Wrestling Camp 1"></div>
+    
+    <h2>About the Founder</h2>
     <p>
       Raised in a low-income household, Jordan Denmark knows firsthand the power of discipline, mentorship, and community support. Now a professional chemist and loving husband, the proud father of three has made it his mission to give back by creating opportunities he wishes he had growing up. That’s why he founded this free kids' wrestling camp — to offer a safe, encouraging space where kids can build confidence, develop life skills, and learn the value of hard work on and off the mat.
-      
+    
+    
       This camp isn’t just about wrestling — it’s about empowering the next generation through structure, encouragement, and real community care. All skill levels are welcome, and every child is treated with respect, patience, and support.
-      
-      Registration is free — all we ask is that each child bring, at minimum, one canned good to donate. It’s a simple way to teach the value of giving back while helping local families in need.</p>
+    
+    
+      Registration is free — all we ask is that each child bring, at minimum, one canned good to donate. It’s a simple way to teach the value of giving back while helping local families in need.
+    </p>
   
-      <section class="collage-section">
-        <div class="collage-item"><img src="images/wcwbio.PNG" alt="Wrestling Camp 1"></div>
-        <div class="collage-item"><img src="images/wcwbio2.PNG" alt="Wrestling Camp 2"></div>
-        <div class="collage-item"><img src="images/cantop.PNG" alt="Wrestling Camp 3"></div>
-      </section>
-  
-    </section>
-
-  <section class="parallax parallax-3">
-    <div class="text">Discover</div>
+    <div class="collage-item2"><img src="images/sect1img2.PNG" alt="Wrestling Camp 2"></div>
   </section>
-
+  
+      <!-- <section class="collage-section">
+        <div class="collage-item"><img src="images/wcwbio.PNG" alt="Wrestling Camp 1"></div>
+        <div class="collage-item"><img src="images/wcwbio2.png" alt="Wrestling Camp 2"></div>
+        <div class="collage-item"><img src="images/cantop.PNG" alt="Wrestling Camp 3"></div>
+    </section> -->
+    
+    <section class="parallax parallax-3 background">
+      <div class="text">Discover</div>
+      <div class="carousel-background">
+        <div class="carousel-track1">
+          <img src="images/wrestle1.jpg" alt="1" />
+          <img src="images/wrestle2.jpg" alt="2" />
+          <img src="images/wrestle3.jpg" alt="3" />
+          <img src="images/wcwbio1.jpg" alt="4" />
+          
+          
+          <img src="images/wrestle1.jpg" alt="5" />
+          <img src="images/wrestle2.jpg" alt="6" />
+          <img src="images/wrestle3.jpg" alt="7" />
+          <img src="images/wcwbio1.jpg" alt="8" />
+          
+        </div>
+    
+      </div>
+    
+      <!-- <div class="foreground-content">
+        <h1>Welcome to the Wrestling Camp</h1>
+        <p>Free registration. Build confidence. Give back.</p>
+      </div> -->
+    </section>
+    
 
   <script src="home.js"></script>
 
