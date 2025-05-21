@@ -27,16 +27,99 @@ body, html {
 }
 
 .parallax-1 {
+  /* background-image: url('images/wcwlg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(80, 9, 9); */
+  /* background-color: white; */
+  /* background-color: rgb(160, 27, 27); */
+  /* background-color: rgb(208, 201, 201); */ 
+  position: relative;
+  height: 100vh;
   background-image: url('images/wcwlg.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-color: white; */
-  /* background-color: rgb(160, 27, 27); */
-  /* background-color: rgb(208, 201, 201); */ 
+  background-attachment: fixed; /* Parallax effect */
   background-color: rgb(80, 9, 9);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
+
+.parallax-overlay-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.floating-image {
+  height: 150px;
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+
+.scrolling-images {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 200%;
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 3s linear infinite;
+}
+
+.scrolling-images img {
+  height: 100px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .parallax-2 {
   background-image: url('images/wcw1.png');
@@ -110,6 +193,22 @@ body, html {
     transform: translateX(-50%);
   }
 }
+
+.scrolling-container {
+  height: 60vh;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.scroll-inside {
+  height: 200%;
+  width: auto;
+}
+
+
+
+
+
 
 
 
