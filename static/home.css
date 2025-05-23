@@ -69,9 +69,10 @@ body, html {
 
 
 .scrolling-images {
+  background-color: #04AA6D;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 5%;
   height: 200%;
   display: flex;
   flex-direction: column;
@@ -79,8 +80,8 @@ body, html {
 }
 
 .scrolling-images img {
-  height: 100px;
-  margin-bottom: 20px;
+  height: 30vh; /* 10% of viewport height */
+  margin-top: 50vh;
   object-fit: cover;
 }
 
@@ -350,7 +351,7 @@ align-items: center;
   display: block;
   /* animation-name: example;
   animation-duration: infinity; */
-  animation: example 5s linear infinite;
+  /* animation: example 5s linear infinite; */
 
 }
 
@@ -359,40 +360,6 @@ align-items: center;
   transform: translateX(0); 
 } */
 
-
-@keyframes example {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: red;}
-}
-
-.scroll-image.visible:hover {
-  width: 700px;
-}
-
-.hand{
-  max-width: 100%;
-  width: 300px;
-  margin: 100px auto;
-  margin-top: -10%;
-  animation: canopen 5s linear infinite;
-  animation-timeline: view();
-
-}
-
-
-@keyframes canopen {
-  from {
-    translate: -150vw 0;
-    scale: 200% 1;
-  }
-
-  to {
-    translate: 0 0;
-    scale: 100% 1;
-  }
-}
 
 
 /* This class houses a form that i name container */
@@ -487,7 +454,12 @@ label {
 /* this is the form section but i named it container everything from sign in class up (in the 380 range)*/
 .container {
   padding: 16px;
-  background-color: green;
+  /* background-color: green; */
+  background: rgba(186, 195, 120, 0.5); 
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  border: 13px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  border-radius: 16px;
+
   font-family: "Chewy", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -495,12 +467,15 @@ label {
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 95%;
+  width: 90%;
   padding: 15px;
   margin: 5px 0 0 0;
   display: inline-block;
   border: none;
-  background: purple;
+  border-radius: 16px;
+  background: rgb(205, 210, 191);
+  backdrop-filter: blur(20px); /* frosted glass effect */
+
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -512,15 +487,18 @@ input[type=text]:focus, input[type=password]:focus {
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
+  width: 33vw;
 }
 
 /* Set a style for the submit button */
 .registerbtn {
-  background-color: #04AA6D;
+  background-color: #8ad8a4;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
+  border-radius: 16px;
+
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
