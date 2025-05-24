@@ -40,7 +40,7 @@ body, html {
   background-image: url('images/wcwlg.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-attachment: fixed; /* Parallax effect */
   background-color: rgb(80, 9, 9);
   display: flex;
@@ -48,6 +48,30 @@ body, html {
   align-items: center;
   overflow: hidden;
 }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .parallax-overlay-content {
   position: relative;
@@ -76,7 +100,7 @@ body, html {
   height: 200%;
   display: flex;
   flex-direction: column;
-  animation: scrollUp 3s linear infinite;
+  /* animation: scrollUp 3s linear infinite; */
 }
 
 .scrolling-images img {
@@ -554,6 +578,89 @@ left: 40;
 }
 
 
+
+
+
+
+
+
+
+
+
+.btn {
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+.contact{
+  background-color: red; /* Fallback color */
+  z-index: 10;
+    left: 25%;
+
+  /* background-color: rgba(0,0,0,0.4);  */
+}
+
+
+
+
+
+.action{
+  background-color: purple; /* Fallback color */
+  z-index: 10;
+    right: 25%;
+
+  /* background-color: rgba(0,0,0,0.4);  */
+}
+
+
+
+
+
+/* contact modal */
+/* The Modal (background) */
+.contact-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /* background-color: rgba(0,0,0,0.4);  */
+  background-color: yellow; /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.contact-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.closec {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closec:hover,
+.closec:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 

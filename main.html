@@ -40,12 +40,13 @@
 
 
 
-
-
+<!-- Parallex section with calendar -->
   <section class="content">
 
     <p>This is a simple section between parallax backgrounds.</p>
-    
+    <label for="date">Select a date:</label>
+    <input type="date" id="date" name="date" />
+
       
     </section>
       
@@ -85,6 +86,8 @@
   
   
               <label for="session">Session</label>
+              <input type="date" id="date" name="date" />
+
               <select name="session" id="session">
                 <option value="1">Session 1 (5:30PM - 6:30PM)</option>
                 <option value="2">Session 2 (6:45PM - 7:45PM)</option>
@@ -193,23 +196,43 @@
     </section> -->
     
     <section class="parallax parallax-3 background">
-      <div class="text">Discover</div>
+      <!-- <div class="text">Discover</div> -->
       <div class="carousel-background">
         <div class="carousel-track1">
           <img src="images/wrestle1.jpg" alt="1" />
           <img src="images/wrestle2.jpg" alt="2" />
           <img src="images/wrestle3.jpg" alt="3" />
+          <img src="images/wcwbio3.jpg" alt="5" />
           <img src="images/wcwbio1.jpg" alt="4" />
           
           
-          <img src="images/wrestle1.jpg" alt="5" />
-          <img src="images/wrestle2.jpg" alt="6" />
-          <img src="images/wrestle3.jpg" alt="7" />
-          <img src="images/wcwbio1.jpg" alt="8" />
-          
+          <img src="images/wrestle1.jpg" alt="6" />
+          <img src="images/wrestle2.jpg" alt="7" />
+          <img src="images/wrestle3.jpg" alt="8" />
+          <img src="images/wcwbio3.jpg" alt="10" />
+          <img src="images/wcwbio1.jpg" alt="9" />
         </div>
-    
       </div>
+
+      <button class="btn contact">Contact Us</button>
+      <button class="btn action">Call to Action</button>
+    
+      <!-- Modal placed outside the button -->
+      <div id="contact-modal" class="contact-modal">
+        <div class="contact-modal-content">
+          <span class="closec">&times;</span>
+          <h2>Contact Us</h2>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+        <!-- <button>
+          Call to Action
+        </button> -->
     
       <!-- <div class="foreground-content">
         <h1>Welcome to the Wrestling Camp</h1>
