@@ -26,6 +26,14 @@ body, html {
   /* z-index: 1; */
 }
 
+
+
+.text{
+  font-family: "Barriecito", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .parallax-1 {
   /* background-image: url('images/wcwlg.png');
   background-size: contain;
@@ -51,9 +59,31 @@ body, html {
 
 
  
+/* 
+.banner {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
 
+.banner .product {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: 170px;
+  left: 50%;
+  transform: translateX(-50);
+  z-index: 12;
+  transition: 0.7s;
+}
 
-
+.banner .product .cannedgood {
+  backrgound:
+    url(images/wcwbio4.PNG);
+    background-size: auto 100%;
+    width: 280px;
+    height: 400px;
+} */
 
 
 
@@ -92,41 +122,147 @@ body, html {
 }
 
 
-.scrolling-images {
+/* .scrolling-images {
+  background: url(images/tincan.png);
   background-color: #04AA6D;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 5%;
-  height: 200%;
+ 
+  width: 500px;
   display: flex;
   flex-direction: column;
-  /* animation: scrollUp 3s linear infinite; */
+    min-height: 100vh;
+    overflow: hidden;
+  } */
+  /* animation: scrollUp 3s linear infinite; */ /*make sure to move this line back up*/
+  
+
+
+/* .scrolling-images img {
+  height: 30vh; 
+  margin-top: 50vh;
+    transform: translateX(-50%);
+    transition: 0.7s;
+} */
+
+/* .overlay {
+  background: url(images/wcwc1.png);
+  background-size: auto 100%;
+  position: absolute;
+  top: 50vh;    
+  height: 30vh;
+  width: 100px;
+  aspect-ratio: 2/3;
+} */
+
+
+.product{
+    position: absolute;
+    left: 15%;
+    transform: translateX(-50%);
+    bottom: 170px;
+    z-index: 2;
+    width: 500px;
+  /* height: 30vh; */
+  height: 200%;
+    transition: 0.7s;
+      animation: scrollUp 3s linear infinite; 
+}
+.product .soda{
+    position: absolute;
+    bottom: 0;
+    left: calc(50%);
+    transform: translateX(-50%);
+}
+.soda{
+    --left: 0px;
+    background: 
+        var(--url) var(--left),
+        url(images/tincan.png) 0 0;
+    background-size: auto 100%;
+    width: 280px;
+    aspect-ratio: 2 / 4;
+    background-blend-mode: multiply;
+    transition: 0.8s;
+    mask-image: url(images/tincan.png);
+    mask-size: auto 100%;
+}
+.soda:nth-child(2){
+    opacity: 0;
+}
+.product:hover{
+    bottom: 300px;
+    animation-play-state: paused;
+
+}
+.product:hover .soda:nth-child(2){
+    opacity: 1;
+    --left: 500px;
+}
+.product:hover .soda:nth-child(1){
+    opacity: 0;
+    --left: 500px;
 }
 
-.scrolling-images img {
-  height: 30vh; /* 10% of viewport height */
+
+
+
+
+
+
+
+
+  /* animation: scrollUp 3s linear infinite;  */
+
+/* Tin Can overlay section */
+/* .image-wrapper {
+  position: relative;
+  height: 30vh;
   margin-top: 50vh;
+}
+
+.image-wrapper img {
+  height: 100%;
+  width: auto;
   object-fit: cover;
 }
 
-@keyframes scrollUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+.image-wrapper .overlay {
+  position: absolute;
+  top: 10px;   
+  left: 0;
+  transform: translateX(-50%);
+  height: 50px;
+  z-index: 2;
+  pointer-events: none;
+  animation: floatUpDown 6s ease-in-out infinite;
+  
 }
 
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+ */
 
 
 
-
-
-
-
-
-
+@keyframes scrollUp {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
 
 
 
