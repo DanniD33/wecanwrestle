@@ -45,7 +45,7 @@ body, html {
   /* background-color: rgb(208, 201, 201); */ 
   position: relative;
   height: 100vh;
-  background-image: url('images/wcwlg.png');
+  background-image: url('static/images/wcwlg.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -179,13 +179,13 @@ body, html {
     --left: 0px;
     background: 
         var(--url) var(--left),
-        url(images/tincan.png) 0 0;
+        url(static/images/tincan.png) 0 0;
     background-size: auto 100%;
-    width: 280px;
+    width: 280px;static/
     aspect-ratio: 2 / 4;
     background-blend-mode: multiply;
     transition: 0.8s;
-    mask-image: url(images/tincan.png);
+    mask-image: url(static/images/tincan.png);
     mask-size: auto 100%;
 }
 .soda:nth-child(2){
@@ -283,7 +283,7 @@ body, html {
 
 
 .parallax-2 {
-  background-image: url('images/wcw1.png');
+  background-image: url('static/images/wcw1.png');
   background-size: contain; 
   background-position: left; 
   background-color: rgb(80, 9, 9);
