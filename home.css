@@ -45,7 +45,7 @@ body, html {
   /* background-color: rgb(208, 201, 201); */ 
   position: relative;
   height: 100vh;
-  background-image: url('static/images/wcwlg.png');
+  background-image: url('staticimages/wcwlg.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -181,7 +181,7 @@ body, html {
         var(--url) var(--left),
         url(static/images/tincan.png) 0 0;
     background-size: auto 100%;
-    width: 280px;static/
+    width: 280px;
     aspect-ratio: 2 / 4;
     background-blend-mode: multiply;
     transition: 0.8s;
