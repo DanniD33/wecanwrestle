@@ -45,7 +45,7 @@ body, html {
   /* background-color: rgb(208, 201, 201); */ 
   position: relative;
   height: 100vh;
-  background-image: url('staticimages/wcwlg.png');
+  background-image: url('static/images/wcwlg.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
