@@ -87,8 +87,6 @@ confirmBtn.addEventListener("click", async function () {
   shouldSubmit = false; // Reset for next submission
   
   
-  
- waiver = req.body.waiver === 'true';
 
   const sessions = [
     "Session 1 (5:30PM - 6:30PM)",
