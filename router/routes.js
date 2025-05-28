@@ -9,5 +9,9 @@ const { registerUser } = require('../controller/userController');
 
 // POST route for registration form
 router.post('/register', registerUser);
+router.get('/users', getAllUsers);
+router.get('/users/:id', getUserById);
+router.put('/users/:id', updateUser);
+router.delete('/users/:id', deleteUser);
 
 module.exports = router;
