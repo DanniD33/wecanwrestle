@@ -15,9 +15,9 @@ app.use(express.static('public')); // serve index.html
 app.get('/', (req, res) => {
   // res.sendFile('Hello from Homepage');
   res.sendFile(path.join(__dirname, 'index.html'));
-  // if (req.user){
-  //   return res.redirect('/login')
-  // }
+  if (req.user){
+    return res.redirect('/login')
+  }
   // res.sendFile(path.join(__dirname, './static/homepage/testlog.html'));
 });
 

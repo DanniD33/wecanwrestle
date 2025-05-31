@@ -1,0 +1,113 @@
+/* mobile.css - override for devices with width 768px and below */
+@media only screen and (max-width: 768px) {
+  /* General text & layout adjustments */
+  body {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  /* Parallax sections become simpler or change layout */
+  .parallax {
+    background-attachment: scroll !important; /* disable parallax effect */
+    padding: 20px 10px;
+  }
+
+  .parallax .text {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* Product soda images stack vertically */
+  .product {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .soda {
+    width: 80vw;
+    height: auto;
+    background-size: contain !important;
+    background-position: center !important;
+  }
+
+  /* Content sections spacing */
+  section.content {
+    padding: 15px 5px;
+  }
+
+  /* Form adjustments */
+  form#registerForm {
+    width: 100%;
+    padding: 10px;
+  }
+
+  form#registerForm .container {
+    padding: 0;
+  }
+
+  form#registerForm label,
+  form#registerForm input,
+  form#registerForm select,
+  form#registerForm button {
+    width: 100%;
+    font-size: 1rem;
+    margin: 6px 0;
+    box-sizing: border-box;
+  }
+
+  form#registerForm input,
+  form#registerForm select {
+    padding: 10px;
+  }
+
+  /* Stack session carousel elements vertically */
+  .session-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Image collage stack vertically */
+  .collage-item1,
+  .collage-item2 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .collage-item1 img,
+  .collage-item2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Carousel images smaller and stacked */
+  .carousel-track1 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .carousel-track1 img {
+    width: 150px;
+    height: auto;
+    margin-right: 8px;
+  }
+
+  /* Buttons full width */
+  .btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+
+  /* Modal form full width */
+  .contact-modal-content form input,
+  .contact-modal-content form textarea {
+    width: 100%;
+  }
+}
+

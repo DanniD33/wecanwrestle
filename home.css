@@ -59,32 +59,6 @@ body, html {
 
 
  
-/* 
-.banner {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.banner .product {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  bottom: 170px;
-  left: 50%;
-  transform: translateX(-50);
-  z-index: 12;
-  transition: 0.7s;
-}
-
-.banner .product .cannedgood {
-  backrgound:
-    url(images/wcwbio4.PNG);
-    background-size: auto 100%;
-    width: 280px;
-    height: 400px;
-} */
-
 
 
 
@@ -121,40 +95,6 @@ body, html {
   100% { transform: translateY(0); }
 }
 
-
-/* .scrolling-images {
-  background: url(images/tincan.png);
-  background-color: #04AA6D;
-  position: absolute;
-  top: 0;
-  left: 5%;
- 
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-    min-height: 100vh;
-    overflow: hidden;
-  } */
-  /* animation: scrollUp 3s linear infinite; */ /*make sure to move this line back up*/
-  
-
-
-/* .scrolling-images img {
-  height: 30vh; 
-  margin-top: 50vh;
-    transform: translateX(-50%);
-    transition: 0.7s;
-} */
-
-/* .overlay {
-  background: url(images/wcwc1.png);
-  background-size: auto 100%;
-  position: absolute;
-  top: 50vh;    
-  height: 30vh;
-  width: 100px;
-  aspect-ratio: 2/3;
-} */
 
 
 .product{
@@ -209,49 +149,6 @@ body, html {
 
 
 
-
-
-
-
-  /* animation: scrollUp 3s linear infinite;  */
-
-/* Tin Can overlay section */
-/* .image-wrapper {
-  position: relative;
-  height: 30vh;
-  margin-top: 50vh;
-}
-
-.image-wrapper img {
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-}
-
-.image-wrapper .overlay {
-  position: absolute;
-  top: 10px;   
-  left: 0;
-  transform: translateX(-50%);
-  height: 50px;
-  z-index: 2;
-  pointer-events: none;
-  animation: floatUpDown 6s ease-in-out infinite;
-  
-}
-
-.image-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 50px;
-  height: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 2;
-}
- */
 
 
 
@@ -436,20 +333,6 @@ body, html {
   font-weight: bold;
   text-align: center;
 }
-
-
-
-
-/* .parallax-left {
-  background-image: url('images/wcw1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 40%; 
-  height: 100vh;
-
-} */
 
 
 
