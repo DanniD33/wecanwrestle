@@ -33,7 +33,11 @@ exit.addEventListener("click", function () {
 });
 
 
-
+  const confirmBtn = document.getElementById("confirmBtn");
+  if (!confirmBtn) {
+    console.error("confirmBtn not found in the DOM");
+    return;
+  }
 
 //Check is waiver is agreed and signature is present
 
