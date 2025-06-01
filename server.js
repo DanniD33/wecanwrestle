@@ -4,8 +4,12 @@ const userRoutes = require('./router/routes.js');
 const path = require('path');
 // const pool = require('pg.js');
 const app = express();
-const port = 10000;
+// const port = 10000;
+const port = process.env.PORT || 10000 
+
 // const port = 3000;
+
+app.use(express.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public')); // serve index.html
