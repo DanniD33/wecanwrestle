@@ -174,7 +174,7 @@ body, html {
     transform: translateX(-50%);
     bottom: 170px;
     z-index: 2;
-    width: 20vw;
+    width: 15vw;
   height: 200%;
     transition: 0.7s;
       /* overflow: hidden; */
@@ -200,14 +200,43 @@ body, html {
 }
 
 
+
+
+
 .soda {
-  width: 100%; /* or fixed width if needed */
-  aspect-ratio: 2 / 4; /* responsive ratio */
-  background: var(--url) center/cover no-repeat;
+  background-color: transparent;
+  background-image: var(--url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 2 / 3;
   flex-shrink: 0;
   border-radius: 12px;
   margin-bottom: 1vh;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .soda {
+  background-color: transparent; 
+  width: 100%;
+  aspect-ratio: 2 / 3; 
+  background: var(--url) center/cover no-repeat;
+  flex-shrink: 0;
+  border-radius: 12px;
+  margin-bottom: 1vh;
+} */
 
 
 

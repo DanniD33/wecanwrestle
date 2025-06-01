@@ -26,8 +26,8 @@ registerUser = async (req, res) => {
           efname,
           elname,
           phone]);
-    res.send('User registered successfully!');
-    res.status(201).json({ message: "User saved", user: output.rows[0] });
+    // res.send('User registered successfully!');
+    res.status(201).json({ message: "User registered successfully for session", user: output.rows[0] });
   } catch (err) {
     console.error(err);
     res.status(500).send('Registration failed.');

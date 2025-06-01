@@ -15,9 +15,10 @@ form.appendChild(messageDiv);
 
 
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", async function(e) {
+  e.preventDefault(); // Stop default submission
+  
   if (!shouldSubmit) {
-    e.preventDefault(); // Stop default submission
     modal.style.display = "flex"; // Show modal
   }
 });
@@ -68,22 +69,25 @@ confirmBtn.addEventListener("click", async function () {
     });
 
     const result = await res.json();
-
-    if (result.ok) {
-      messageDiv.textContent = result.message || "Registration successful!";
+console.log("Raw response:", res);
+console.log("Parsed result:", result);
+    if (res.ok) {
+    // Hide form, show confirmation view
+    // document.getElementById("formContainer").style.display = "none";
+    // document.getElementById("successContainer").style.display = "block";
+      messageDiv.textContent = "Registration successful!";
       messageDiv.className = "message success";
-      
 
-      setTimeout(() => {
-        form.reset();
-        messageDiv.textContent = "";
-        messageDiv.className = "";
-      }, 3000);
+
+    // Optionally reset form for next time
+    form.reset();
+    shouldSubmit = false;
     } else {
       messageDiv.textContent = result.error || "Registration failed.";
       messageDiv.className = "message error";
     }
   } catch (error) {
+    console.error("Fetch error:", error); // 👈 this will log the actual issue in DevTools
     messageDiv.textContent = "Network error. Please try again.";
     messageDiv.className = "message error";
   }
@@ -100,15 +104,20 @@ confirmBtn.addEventListener("click", async function () {
   let currentIndex = 0;
   const sessionInput = document.getElementById("session");
 
-  document.getElementById("prevSession").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + sessions.length) % sessions.length;
-    sessionInput.value = sessions[currentIndex];
-  });
 
-  document.getElementById("nextSession").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % sessions.length;
-    sessionInput.value = sessions[currentIndex];
-  });
+  const sessionValue = form.querySelector("#session").value;
+  console.log("Selected session:", sessionValue);
+
+
+  // document.getElementById("prevSession").addEventListener("click", () => {
+  //   currentIndex = (currentIndex - 1 + sessions.length) % sessions.length;
+  //   sessionInput.value = sessions[currentIndex];
+  // });
+
+  // document.getElementById("nextSession").addEventListener("click", () => {
+  //   currentIndex = (currentIndex + 1) % sessions.length;
+  //   sessionInput.value = sessions[currentIndex];
+  // });
 });
 
 
