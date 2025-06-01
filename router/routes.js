@@ -13,6 +13,8 @@ const {
 
 
 
+const path = require('path');
+console.log('Trying to load userController from:', path.resolve(__dirname, '../controller/userController.js'));
 
 // POST route for registration form
 router.post('/register', registerUser);
