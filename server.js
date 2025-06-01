@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 app.use(bodyParser.json());
 app.use("/api", userRoutes);
 
-// app.use(express.static(path.join(__dirname, 'static')));
+app.use(express.static(path.join(__dirname, 'static'))); //without this line the waiver fails to load upon submission
 app.use(express.static(path.join(__dirname)));
 app.use(express.static(path.join(__dirname, 'images')));
 

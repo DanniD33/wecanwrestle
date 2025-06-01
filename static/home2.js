@@ -1,7 +1,7 @@
 let shouldSubmit = false;
 const form = document.getElementById("registerForm");
 const modal = document.getElementById("myModal"); // your modal wrapper
-const confirmBtn = document.getElementById("confirmBtn");
+// const confirmBtn = document.getElementById("confirmBtn");
 const parentNameInput = document.getElementById("sname"); // input inside modal
 const close = document.getElementById("closeModal");
 const exit = document.getElementById("exitModal");
@@ -36,7 +36,7 @@ exit.addEventListener("click", function () {
   const confirmBtn = document.getElementById("confirmBtn");
   if (!confirmBtn) {
     console.error("confirmBtn not found in the DOM");
-    return;
+    // return;
   }
 
 //Check is waiver is agreed and signature is present
