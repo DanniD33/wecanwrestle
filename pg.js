@@ -5,13 +5,28 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 
+
+
+
+
 const pool = new Pool({
-  user: 'dannidenmark',
-  password: 'your_password',
-  host: 'localhost',
-  port: 5432, // default Postgres port
-  database: 'wecanwrestle'
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for Render
+  },
 });
+
+module.exports = pool;
+
+
+//Local DB
+// const pool = new Pool({
+//   user: 'dannidenmark',
+//   password: 'your_password',
+//   host: 'localhost',
+//   port: 5432, // default Postgres port
+//   database: 'wecanwrestle'
+// });
 
 // pool.connect();
 // module.exports = {
