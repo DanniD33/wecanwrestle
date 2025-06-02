@@ -53,6 +53,9 @@ confirmBtn.addEventListener("click", async function () {
     return;
   }
 
+  confirmBtn.disabled = true;
+
+
   shouldSubmit = true;
   modal.style.display = "none";
 
