@@ -8,13 +8,13 @@ const {
   getUserById,
   updateUser,
   deleteUser
-} = require('../controller/userController');
+} = require('./controller/userController');
 
 
 
 
 const path = require('path');
-console.log('Trying to load userController from:', path.resolve(__dirname, '../controller/userController.js'));
+console.log('Trying to load userController from:', path.resolve(__dirname, './controller/userController.js'));
 
 // POST route for registration form
 router.post('/register', registerUser);
