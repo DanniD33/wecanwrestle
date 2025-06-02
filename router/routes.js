@@ -16,7 +16,7 @@ const router = express.Router();
 
 
 
-const { registerUser } = require('../controller/userController.js');
+const { registerUser } = require('../controller/userController');
 
 
 
