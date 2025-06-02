@@ -16,6 +16,10 @@ app.use(express.static('public')); // serve index.html
 // app.use('/', routes);
 
 
+const runMigration = require('./migrate');
+
+
+
 app.get('/', (req, res) => {
   // res.sendFile('Hello from Homepage');
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -27,6 +31,24 @@ app.get('/', (req, res) => {
 
 app.use(bodyParser.json());
 app.use("/api", userRoutes);
+
+
+const fs = require("fs");
+const schema = fs.readFileSync("schema.sql", "utf8");
+
+app.get("/run-migration", async (req, res) => {
+  try {
+    // await pool.query(schema);
+    await require('./migrate');
+    res.send("Migration successful");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Migration failed");
+  }
+});
+
+
+
 
 app.use(express.static(path.join(__dirname, 'static'))); //without this line the waiver fails to load upon submission
 app.use(express.static(path.join(__dirname)));
