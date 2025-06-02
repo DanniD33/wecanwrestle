@@ -1,3 +1,4 @@
+const fs = require("fs");
 const express = require('express');
 const bodyParser = require('body-parser');
 const userRoutes = require('./router/routes.js');
@@ -33,7 +34,6 @@ app.use(bodyParser.json());
 app.use("/api", userRoutes);
 
 
-const fs = require("fs");
 const schema = fs.readFileSync("schema.sql", "utf8");
 
 app.get("/run-migration", async (req, res) => {

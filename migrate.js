@@ -1,16 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const pool = require('pg.js');  // Your existing pool setup with env DATABASE_URL
-
-
-
-
-
-
-
-const fs = require('fs');
-const path = require('path');
-const pool = require('./db'); // adjust path if needed
+const pool = require('./pg.js'); // make sure this points to your pool setup file
 
 const schemaPath = path.join(__dirname, 'schema.sql');
 
@@ -23,7 +13,6 @@ const schemaPath = path.join(__dirname, 'schema.sql');
     console.error('❌ Migration failed:', err);
   }
 })();
-
 
 
 
