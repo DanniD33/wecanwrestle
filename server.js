@@ -36,16 +36,6 @@ app.use("/api", userRoutes);
 
 const schema = fs.readFileSync("schema.sql", "utf8");
 
-app.get("/run-migration", async (req, res) => {
-  try {
-    // await pool.query(schema);
-    await require('./migrate');
-    res.send("Migration successful");
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Migration failed");
-  }
-});
 
 
 
