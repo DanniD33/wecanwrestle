@@ -8,7 +8,7 @@ const {
   getUserById,
   updateUser,
   deleteUser
-} = require('./controller/userController');
+} = require('../controller/userController.js');
 
 
 
