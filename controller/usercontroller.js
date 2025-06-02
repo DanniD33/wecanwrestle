@@ -30,7 +30,7 @@ registerUser = async (req, res) => {
     res.status(201).json({ message: "User registered successfully for session", user: output.rows[0] });
   } catch (err) {
     console.error(err);
-    res.status(500).send('Registration failed.');
+    res.status(500).json({error:'Registration failed.'});
   }
 };
 
