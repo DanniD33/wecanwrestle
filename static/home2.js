@@ -20,7 +20,7 @@ form.addEventListener("submit", async function(e) {
   
   if (!shouldSubmit) {
     modal.style.display = "flex"; // Show modal
-    modal.style.display ="none";
+    // modal.style.display ="none";
 
   }
 });
