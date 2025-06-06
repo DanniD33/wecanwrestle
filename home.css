@@ -1,8 +1,8 @@
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .parallax {
     background-attachment: scroll;
   }
-}
+} */
 body, html {
   margin: 0;
   padding: 0;
@@ -643,6 +643,8 @@ margin-top: -20%; /* Moves image up */
 @media (max-width: 600px) {
    .parallax {
     position: relative; /* important */
+    background-attachment: scroll;
+
   } 
   .container {
     /* display: none;
@@ -687,6 +689,7 @@ margin-top: -20%; /* Moves image up */
 
     .text-highlight {
       margin-bottom: 2rem;
+      color: white;
   }
 
  .container p, h1 {
@@ -695,8 +698,70 @@ margin-top: -20%; /* Moves image up */
   
 .contact-modal-content h2 {
   font-size: clamp(0.8rem, 2.5vw, 1rem);
-
+  color: white;
 }
+
+
+
+
+
+
+
+.carousel-background {
+  overflow-x: auto;
+  width: 100%;
+  animation: none; /* Stop animation on mobile */
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.carousel-track1 {
+  animation: none;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+
+.carousel-track1 img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  object-fit: cover;  /* Or 'contain' if you prefer no cropping */
+}
+ 
+
+
+/* .carousel-track1 img {
+    height: auto;
+    width: 80vw;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    border-radius: 12px;
+  } */
+
+  .parallax-3 {
+    height: auto; /* Don’t lock height to 100vh on mobile */
+    padding: 2rem 0;
+  }
+
+  .scrolling-container,
+  .scroll-inside {
+    height: auto;
+    overflow: visible;
+  }
+
+.carousel-background::-webkit-scrollbar {
+  display: none;
+}
+.carousel-background {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
 
 
 }
@@ -753,7 +818,7 @@ label {
 
 /* Modal box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: black;
   padding: 20px;
   border: 1px solid #888888;
   width: 90%;
